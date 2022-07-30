@@ -7,6 +7,14 @@ var started = false;
 var level = 0;
 
 // Detecting Keyboard Press
+$(document).click(function () {
+  if (!started) {
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    started = true;
+  }
+});
+
 $(document).keypress(function () {
   if (!started) {
     $("#level-title").text("Level " + level);
